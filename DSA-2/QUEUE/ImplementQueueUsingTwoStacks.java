@@ -8,7 +8,7 @@ static class Queue
 	static Stack<Integer> s1 = new Stack<Integer>();
 	static Stack<Integer> s2 = new Stack<Integer>();
 
-	static void enQueue(int x)
+	void enQueue(int x)
 	{		
 		while (!s1.isEmpty()){  // Move all elements from s1 to s2
 			s2.push(s1.pop());
@@ -21,8 +21,7 @@ static class Queue
 		}
 	}
 
-	// Dequeue an item from the queue
-	static int deQueue()
+	int deQueue()
 	{		
 		if (s1.isEmpty()){  // if first stack is empty
 			System.out.println("Q is Empty");
@@ -33,17 +32,18 @@ static class Queue
 		return x;   // Return top of s1
 	}
 
-    static void display(){
-        System.out.println(s1);
-    }
+	void display(){
+		System.out.println(s1);
+	}
 
-    static int size(){
-        return s1.size();
-    }
+	int size(){
+		return s1.size();
+	}
 
-    static int printFront(){
-        return s1.peek();
-    }
+	int printFront(){
+		return s1.peek();
+	}
+	    
 }
 
 // Driver code
