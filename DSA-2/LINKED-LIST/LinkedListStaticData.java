@@ -17,16 +17,12 @@ class LinkedListStaticData {
 		head.next.next=new Node("B");
 		head.next.next.next=new Node("A");
 			printlist(head);
-			System.out.println();
 		head=addatFirst(head,"First");
 			printlist(head);
-			System.out.println();
 		addatLast(head,"Last.");
 			printlist(head);
-			System.out.println();
 		delfromLast(head);
 			printlist(head);
-			System.out.println();
 		head=delfromFirst(head);
 			printlist(head);
     } 
@@ -79,13 +75,11 @@ class LinkedListStaticData {
 	} 
 		
 	public static void printlist(Node head){
-		while(head==null){
-			return;
-		}
 		while(head!=null){
 			System.out.print(head.data+" ");
 			head=head.next;
 		}
+		System.out.println();
 	}
 }
 
