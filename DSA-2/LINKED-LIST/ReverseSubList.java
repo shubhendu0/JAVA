@@ -65,8 +65,8 @@ class ReverseSubList
             temp = temp.next;
         }                           //  prev: null -> 1     temp: 1 -> 2
         
-        ListNode start = temp;      //  current in loop  ...    start : 2
-        ListNode end = null;        //  previous of current in loop
+        ListNode start = temp;      //  current   ...    start : 2
+        ListNode end = null;        //  previous of current 
         
         for(int i=0; i<=right-left && temp!=null; i++)
         {
@@ -74,17 +74,18 @@ class ReverseSubList
             temp.next=end;
             end=temp;
             temp=next;
-        }                   //  start: 2 -> 4  end: null -> 2     //   2 <- 3 <- 4
+        }                   //  start: 2 -> 4   end: null -> 2     //   2 <- 3 <- 4
         
-        if(start!=null)     //  if there are more nodes after index Right
+        if(start!=null)     //  if there is/are nodes after right index 
         {
-            start.next=temp;    //  2 -> 5
-            if(prev!=null)
-                prev.next=end;      //  1 -> 4
+            start.next=temp;     //  2 -> 5
+            if(prev!=null)        
+                prev.next=end;      //  1 -> 4 , if there is/are nodes before left index 
             else
-                head=end;     //  head=2 if next value is null i.e only two nodes
+                head=end;     //  head=4 , if there is no node before left index 
         }
         
         return head;        // 1 -> 4 -> 3 -> 2 -> 5
     }
 }
+
