@@ -74,7 +74,7 @@ class ReverseSubList
             temp.next=end;
             end=temp;
             temp=next;
-        }                   //  start: 2 -> 4   end: null -> 2     //   2 <- 3 <- 4
+        }                   //  4 -> 3 -> 2
         
         if(start!=null)     //  if there is/are nodes after right index 
         {
