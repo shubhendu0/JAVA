@@ -76,7 +76,7 @@ class ReverseSubList
             temp=next;
         }                   //  start: 2 -> 4  end: null -> 2     //   2 <- 3 <- 4
         
-        if(start!=null)     //  if there are more than 2 nodes 
+        if(start!=null)     //  if there are more nodes after index Right
         {
             start.next=temp;    //  2 -> 5
             if(prev!=null)
