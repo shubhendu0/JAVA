@@ -1,6 +1,6 @@
 package Linkedlist;
-
 // Java program to reverse a linked list in groups of given size
+
 class ReverseInGroups{
 	Node head; 
 	class Node {
@@ -13,7 +13,7 @@ class ReverseInGroups{
 	}
 
 	Node reverseingroups(Node head, int k) 
-    {
+    	{
 		if(head == null) return null;		
 		Node current = head;
 		Node next = null;
@@ -23,9 +23,9 @@ class ReverseInGroups{
 			next = current.next;
 			current.next = prev;
 			prev = current;
-			current = next;
+			current = next;     
 			count++;
-		}
+		}			// After 1st loop , 1 <- 2 <- 3	  ,   prev = 3 , current = 1 , next = 4 											
 		if (next != null)
 			head.next = reverseingroups(next, k);
 
@@ -59,12 +59,12 @@ class ReverseInGroups{
 	public static void main(String args[])
 	{
 		ReverseInGroups llist = new ReverseInGroups();
-		llist.add(9);
-		llist.add(8);
-		llist.add(7);
-		llist.add(6);
+		llist.add(1);
+		llist.add(2);
+		llist.add(3);
+		llist.add(4);
 		llist.add(5);
-		llist.add(4);		
+		llist.add(6);		
 
 		System.out.println("Given Linked List");
 		llist.printList();
