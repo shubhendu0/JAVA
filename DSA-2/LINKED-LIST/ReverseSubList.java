@@ -1,4 +1,5 @@
 package Linkedlist;
+// Java Program to reverse the nodes from index A to index B.
 
 class ReverseSubList 
 {
