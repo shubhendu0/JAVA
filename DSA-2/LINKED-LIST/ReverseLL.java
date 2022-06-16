@@ -43,7 +43,7 @@ class ReverseLL {
 			current.next = prev;
 			prev = current;
 			current = next;
-		}
+		}			//   null <- a <- b <- c <- d   ,   prev = d   ,   current = null
 		node = prev;
 		return node;
 	}			
